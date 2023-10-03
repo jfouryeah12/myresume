@@ -126,6 +126,15 @@ export default function Home() {
                     <ul className="flex items-center space-x-6">
                       <li>
                         <motion.button
+                          onClick={toggleVisibility}
+                          className="text-lg font-medium text-gray-600 relative group hover:text-white mb-5"
+                        >
+                          Home
+                          <span className="absolute bottom-[-5px] left-0 w-full h-1 rounded-full bg-green-500 origin-left transform scale-x-0 transition-transform group-hover:scale-x-50 duration-300 group-hover:bg-red-500 group-hover:shadow-md"></span>
+                        </motion.button>
+                      </li>
+                      <li>
+                        <motion.button
                           onClick={toggleAboutVisibility}
                           className="text-lg font-medium text-gray-600 relative group hover:text-white mb-5"
                         >
