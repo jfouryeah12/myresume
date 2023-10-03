@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion"; // Import framer-motion components
-import Header from "./components/Header";
+
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa"; // Import social media icons
 import About from "./components/About";
 import Resume from "./components/Resume";
@@ -97,8 +97,6 @@ export default function Home() {
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
             <div>
-              <Header />
-
               {/*Links*/}
               <div className="mx-auto max-w-screen-xl flex items-center justify-between px-8 py-6 lg:py-8 lg:flex-row bg-violet-300">
                 {/*About*/}

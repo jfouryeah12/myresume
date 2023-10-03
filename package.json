@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "preview": "npm run build && npm run start",
     "start": "next start",
     "format": "prettier --write .",
     "lint": "next lint"
@@ -16,6 +17,7 @@
     "framer-motion": "^10.16.4",
     "next": "latest",
     "prettier": "^3.0.3",
+    "preview": "^0.1.3",
     "react": "latest",
     "react-dom": "latest",
     "react-hot-toast": "^2.4.1",
