@@ -88,9 +88,9 @@ export default function Portfolio() {
                 <Image
                   src={item.imageUrl}
                   alt={item.title}
-                  width={284}
-                  height={396}
-                  className="rounded-lg mt-2 shadow-cool"
+                  width={728}
+                  height={410}
+                  className="w-full h-full object-cover rounded-md"
                 />
               </div>
               <div className="p-4">
