@@ -22,3 +22,7 @@ export const directLinks = {
   github: "https://github.com/jfouryeah12",
   instagram: "https://www.instagram.com/jerichoybanez36/",
 };
+
+export const downloadLinks = {
+  pdf: "/pdf/Estares-Jericho-Resume.pdf",
+};

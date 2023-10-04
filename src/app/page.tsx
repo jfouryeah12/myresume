@@ -118,7 +118,7 @@ export default function Home() {
               <header>
                 <div className="mx-auto max-w-screen-xl flex items-center justify-between px-8 py-6 lg:py-8 lg:flex-row">
                   <div className="flex items-center space-x-6">
-                    <h1 className="text-3xl font-extrabold text-primary-500">
+                    <h1 className="text-3xl max-md:text-sm font-extrabold text-primary-500">
                       {infoLabel.name}
                     </h1>
                   </div>
