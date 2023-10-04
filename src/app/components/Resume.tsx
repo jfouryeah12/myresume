@@ -126,6 +126,73 @@ export default function Resume() {
                     Ph
                   </p>
                 </li>
+
+                <h1 className="text-2xl max-md:text-sm font-extrabold text-primary-500 with-green-line">
+                  Experience
+                </h1>
+                <li className="mx-4">
+                  <h3 className="flex my-2 items-center text-green-300 text-sm font-extrabold shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
+                    <AiFillInfoCircle />
+                    <span className="ml-2 uppercase">
+                      Web Development Weberlly
+                    </span>
+                  </h3>
+                  <div className="w-[70%] mx-5 my-1 text-center max-md:bg-transparent bg-gray-500 rounded-md">
+                    <p className="mx-4 text-sm max-md:text-[50%]">
+                      Intern Web Developer| Mar 20,2023 - Jun 13, 20233
+                    </p>
+                  </div>
+                  <div className="w-[70%] mx-5 my-1 text-center max-md:bg-transparent bg-gray-500 rounded-md">
+                    <p className="mx-4 text-sm max-md:text-[50%]">
+                      Software Developer| Jul 31,2023 - Sep 30, 2023
+                    </p>
+                  </div>
+                  <li className="text-md max-md:text-xs mx-6 mt-4">
+                    <p className="flex my-2 items-center shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
+                      <AiOutlineCaretRight />
+                      <span>
+                        Created responsive websites with expertise in front-end
+                        and back-end tech, using Figma for efficient design.
+                      </span>
+                    </p>
+                    <p className="flex my-2  items-center shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
+                      <AiOutlineCaretRight />
+                      <span>
+                        Proficient in both front-end and back-end for seamless
+                        user experiences
+                      </span>
+                    </p>
+                    <p className="flex my-2  items-center shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
+                      <AiOutlineCaretRight />
+                      <span>
+                        Ensured optimal performance on all devices through
+                        responsive design.
+                      </span>
+                    </p>
+                    <p className="flex my-2  items-center shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
+                      <AiOutlineCaretRight />
+                      <span>
+                        Collaborated with cross-functional teams on web
+                        development projects, prioritizing best coding practices
+                      </span>
+                    </p>
+
+                    <p className="flex my-2  items-center shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
+                      <AiOutlineCaretRight />
+                      <span>
+                        Ensured high-quality standards through thorough testing
+                        and debugging.
+                      </span>
+                    </p>
+                    <p className="flex my-2  items-center shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
+                      <AiOutlineCaretRight />
+                      <span>
+                        Kept up with the latest web development trends and
+                        technologies.
+                      </span>
+                    </p>
+                  </li>
+                </li>
               </ul>
             </div>
             {/* Second Container */}

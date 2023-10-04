@@ -7,11 +7,13 @@ import Resume from "./components/Resume";
 import { infoLabel, directLinks } from "./components/Lib/string";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
 import clsx from "clsx";
+import Fortpolio from "./components/Fortpolio";
 
 export default function Home() {
   const [isHomeVisible, setIsHomeVisible] = useState(true);
   const [isAboutVisible, setIsAboutVisible] = useState(false);
   const [isResumeVisible, setIsResumeVisible] = useState(false);
+  const [isFortpolioVisible, setIsFortpolioVisible] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleVisibility = () => {
@@ -21,10 +23,18 @@ export default function Home() {
   const toggleAboutVisibility = () => {
     setIsAboutVisible(true);
     setIsResumeVisible(false);
+    setIsFortpolioVisible(false);
   };
 
   const toggleResumeVisibility = () => {
     setIsResumeVisible(true);
+    setIsAboutVisible(false);
+    setIsFortpolioVisible(false);
+  };
+
+  const toggleFortpolioVisibility = () => {
+    setIsFortpolioVisible(true);
+    setIsResumeVisible(false);
     setIsAboutVisible(false);
   };
 
@@ -153,7 +163,7 @@ export default function Home() {
                       </li>
                       <li>
                         <motion.button
-                          onClick={toggleVisibility}
+                          onClick={toggleFortpolioVisibility}
                           className="text-lg font-medium text-gray-600 relative group hover:text-white mb-5"
                         >
                           Portfolio
@@ -213,7 +223,7 @@ export default function Home() {
                         </li>
                         <li>
                           <motion.button
-                            onClick={toggleVisibility}
+                            onClick={toggleFortpolioVisibility}
                             className="text-lg font-medium text-gray-600 relative group hover:text-white mb-5"
                           >
                             Portfolio
@@ -251,11 +261,25 @@ export default function Home() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 0 }}
                         transition={{ duration: 0.5, ease: "easeOut" }}
-                        hidden={isAboutVisible}
                       >
                         <Resume />
                       </motion.section>
                     )}
+
+                    {/* Fortpolio */}
+                    <AnimatePresence>
+                      {isFortpolioVisible && (
+                        <motion.section
+                          id="fortpolio"
+                          initial={{ opacity: 0, y: -50 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 0 }}
+                          transition={{ duration: 0.5, ease: "easeOut" }}
+                        >
+                          <Fortpolio />
+                        </motion.section>
+                      )}
+                    </AnimatePresence>
                   </AnimatePresence>
                 </AnimatePresence>
               </div>
