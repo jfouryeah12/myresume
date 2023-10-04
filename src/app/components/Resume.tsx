@@ -118,9 +118,9 @@ export default function Resume() {
                     <AiFillInfoCircle />
                     <span className="ml-2 uppercase">Primary</span>
                   </h3>
-                  <h1 className="text-2xl max-md:text-sm font-extrabold text-primary-500 with-green-line">
+                  <div className="w-[30%] mx-5 my-1 text-center max-md:bg-transparent bg-gray-500 rounded-md">
                     <p className="mx-4 max-md:text-[50%]">2010 - 2013</p>
-                  </h1>
+                  </div>
                   <p className="mx-5 my-2 max-md:text-xs  italic shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
                     Marangal National High School, San Jose Del Monte Bulacan,
                     Ph
