@@ -36,7 +36,7 @@ export default function About() {
               {infoLabel.role}
             </h1>
             <p className="italic">
-              Hello, my name is Echo, and I&apos;m a college student studying
+              Hello, my name is Echo, and I&apos;m a college graduate from
               Information Technology with a concentration on Deep Learning in a
               variety of fields. Being systematic, thorough, and meticulous
               results in solid code and trustworthy creation scripts. Building

@@ -86,7 +86,7 @@ export default function Resume() {
                     </span>
                   </h3>
                   <div className="w-[30%] mx-5 my-1 text-center max-md:bg-transparent bg-gray-500 rounded-md">
-                    <p className="mx-4 max-md:text-[50%]">2019 - Present</p>
+                    <p className="mx-4 max-md:text-[50%]">2019 - 2023</p>
                   </div>
                   <p className="mx-5 my-2 max-md:text-xs  italic">
                     STI San Jose Del Monte Bulacan, Ph

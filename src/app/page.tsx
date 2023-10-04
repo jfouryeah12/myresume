@@ -11,7 +11,7 @@ import Fortpolio from "./components/Fortpolio";
 
 export default function Home() {
   const [isHomeVisible, setIsHomeVisible] = useState(true);
-  const [isAboutVisible, setIsAboutVisible] = useState(false);
+  const [isAboutVisible, setIsAboutVisible] = useState(true);
   const [isResumeVisible, setIsResumeVisible] = useState(false);
   const [isFortpolioVisible, setIsFortpolioVisible] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
