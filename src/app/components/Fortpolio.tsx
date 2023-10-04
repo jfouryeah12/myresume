@@ -34,7 +34,7 @@ export default function Portfolio() {
           <div className=" mt-4">
             <button
               onClick={() => handleFilterClick("all")}
-              className={`mr-2 uppercase shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out ${
+              className={`mr-2 max-md:text-xs uppercase shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out ${
                 selectedFilter === "all"
                   ? "bg-primary-500 text-white"
                   : "bg-gray-300 text-gray-700"
@@ -44,7 +44,7 @@ export default function Portfolio() {
             </button>
             <button
               onClick={() => handleFilterClick("website")}
-              className={`mr-2 uppercase shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out ${
+              className={`mr-2 max-md:text-xs uppercase shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out ${
                 selectedFilter === "website"
                   ? "bg-primary-500 text-white"
                   : "bg-gray-300 text-gray-700"
@@ -52,19 +52,20 @@ export default function Portfolio() {
             >
               Websites
             </button>
+
             <button
               onClick={() => handleFilterClick("application")}
-              className={`mr-2 uppercase shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out ${
+              className={`mr-2 max-md:text-xs uppercase shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out ${
                 selectedFilter === "application"
                   ? "bg-primary-500 text-white"
-                  : "bg-gray-300 text-gray-700"
+                  : "bg-gray-300 text-gray-700 border-red-400 border-solid"
               } px-3 py-2 rounded-lg hover:bg-primary-600 transition duration-300`}
             >
               Application
             </button>
             <button
               onClick={() => handleFilterClick("software")}
-              className={`mr-2 uppercase shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out ${
+              className={`mr-2 max-md:text-xs uppercase shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out ${
                 selectedFilter === "software"
                   ? "bg-primary-500 text-white"
                   : "bg-gray-300 text-gray-700"
@@ -76,7 +77,7 @@ export default function Portfolio() {
         </div>
 
         {/* Cards */}
-        <div className=" max-w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8 ">
+        <div className=" max-w-full max-md:text-sm grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8 ">
           {filteredPortfolio.map((item: Props, index: number) => (
             <div
               key={item.id}
