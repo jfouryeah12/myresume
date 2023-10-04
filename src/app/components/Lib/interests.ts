@@ -14,7 +14,7 @@ export interface Props {
   text: string;
 }
 
-const links: Array<Props> = [
+const interest: Array<Props> = [
   {
     id: uniqueId(),
     icon: FaReact,
@@ -77,4 +77,4 @@ const links: Array<Props> = [
   },
 ];
 
-export default links;
+export default interest;
