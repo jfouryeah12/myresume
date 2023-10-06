@@ -139,7 +139,7 @@ export default function Resume() {
                   </h3>
                   <div className="w-[70%] mx-5 my-1 text-center max-md:bg-transparent bg-gray-500 rounded-md">
                     <p className="mx-4 text-sm max-md:text-[50%]">
-                      Intern Web Developer| Mar 20,2023 - Jun 13, 20233
+                      Intern Web Developer| Mar 20,2023 - Jun 13, 2023
                     </p>
                   </div>
                   <div className="w-[70%] mx-5 my-1 text-center max-md:bg-transparent bg-gray-500 rounded-md">
