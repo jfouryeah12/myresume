@@ -23,7 +23,7 @@ const fortpolio: Array<Props> = [
     title: "IdentifEYE App",
     type: "application",
     description: "OFFICIAL WEBSITE OF IDENTIFEYE-APP",
-    imageUrl: "/image/identifEyeWeb.gif",
+    imageUrl: "/image/identifeye-webp.webp",
     link: "https://identifeyeph.web.app/",
   },
   {
