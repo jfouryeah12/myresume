@@ -15,7 +15,7 @@ const fortpolio: Array<Props> = [
     title: "IdentifEYE Web",
     type: "website",
     description: "OFFICIAL WEBSITE OF IDENTIFEYE-APP",
-    imageUrl: "/image/identifEye.png",
+    imageUrl: "/image/identifEye.webp",
     link: "https://identifeyeph.web.app/",
   },
   {
