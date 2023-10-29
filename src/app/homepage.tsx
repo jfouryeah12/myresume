@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion"; // Import framer-motion components
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa"; // Import social media icons
