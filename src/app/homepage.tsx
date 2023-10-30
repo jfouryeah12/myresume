@@ -188,18 +188,18 @@ export default function Home() {
                 <div
                   className={clsx(
                     isOpen ? "visible opacity-100" : "invisible opacity-0",
-                    "text-dark-300 absolute inset-0 z-10 min-h-screen w-full overflow-hidden bg-white transition-all",
+                    "text-dark-300 absolute inset-0 z-10 min-h-screen w-full overflow-hidden bg-black transition-all",
                   )}
                   aria-expanded={isOpen}
                 >
-                  <div className="container relative h-full bg-black">
+                  <div className="container relative h-full">
                     <div className="px-8 flex items-center justify-between py-8">
                       <button type="button" onClick={() => setIsOpen(false)}>
                         <XMarkIcon className="h-6 w-6 text-primary-500" />
                       </button>
                     </div>
                     <nav
-                      className="relative z-40 pt-32 text-left "
+                      className="relative z-40 pt-32 text-left mx-[20%]"
                       aria-label="Mobile menu"
                     >
                       <ul className="space-y-4 lg:space-y-8">

@@ -17,13 +17,13 @@ const links: Array<Props> = [
   {
     id: uniqueId(),
     skill: "WEB DEV",
-    percentage: 86,
-    yearsOfExperience: "4",
+    percentage: 78,
+    yearsOfExperience: "2",
   },
   {
     id: uniqueId(),
     skill: "DATABASE MANAGEMENT",
-    percentage: 80,
+    percentage: 72,
     yearsOfExperience: "3",
   },
   {
@@ -41,7 +41,7 @@ const links: Array<Props> = [
   {
     id: uniqueId(),
     skill: "SOFTWARE DEV",
-    percentage: 84,
+    percentage: 74,
     yearsOfExperience: "2",
   },
 ];
