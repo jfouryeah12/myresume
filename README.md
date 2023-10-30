@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is an open-source resume ready to go. If you like it, please click the star and follow me. :)
 
-## Getting Started
+<h1>
+Demo
+</h1>
+Open: https://estaresjericho-resume-ph.vercel.app/
+<h1>
+📦 Setup:
+</h1>
+Download the zip / Clone the repository 'Git Desktop' or use 'git clone'
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```gitbash
+https://github.com/jfouryeah12/myresume.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Go to the project
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```gitbash
+cd myresume
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Install dependencies
 
-## Learn More
+```gitbash
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+You can now check using this command
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```gitbash
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+</h3>
 
-## Deploy on Vercel
+<h1>
+If you don't have VSCODE ye't
+</h1>
+Visit this link
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+https://code.visualstudio.com/download
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<h3>
+<img src="https://c.tenor.com/kVnb-73M6coAAAAi/memes-meme.gif" width="60"> <em><b>🚀You are good to go!  </b><img src="https://c.tenor.com/kVnb-73M6coAAAAi/memes-meme.gif" width="60">
+
+</h3>
