@@ -22,7 +22,7 @@ export default function PdfShow() {
     const anchor = document.createElement("a");
     anchor.href = pdfUrl;
     anchor.target = "_blank";
-    anchor.download = "downloaded-file.pdf"; // You can set the filename here
+    anchor.download = "estares-jericho-resume.pdf"; // You can set the filename here
 
     // Trigger a click event on the anchor element to start the download
     anchor.click();

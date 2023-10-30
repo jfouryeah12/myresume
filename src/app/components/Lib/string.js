@@ -6,15 +6,21 @@ String of every label
 
 export const infoLabel = {
   Imahe: "/static/Echo 1.svg",
-  role: "Full-Stack Developer",
+  role: "Programmer",
   name: "Estares Y. Jericho",
   bday: "24, Nov, 2001",
   age: "21",
   institution: "STI College San Jose Del Monte",
-  phone: "none",
+  phone: "",
   city: "Bulacan, Philippines",
   program: "Bachelor of Science in Information Technology",
   email: "jerichoyestares2001@yahoo.com",
+};
+
+export const publisher = {
+  //Remove this code if you using my design
+  publisher: "👉Clone this!👈",
+  mygitdesign: "https://github.com/jfouryeah12/myresume",
 };
 
 export const directLinks = {
@@ -24,5 +30,5 @@ export const directLinks = {
 };
 
 export const downloadLinks = {
-  pdf: "/pdf/Estares-Jericho-Resume.pdf",
+  pdf: "/pdf/Estares-Jericho Resume.pdf",
 };
