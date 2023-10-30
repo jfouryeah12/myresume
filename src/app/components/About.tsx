@@ -32,9 +32,11 @@ export default function About() {
           </div>
           {/* Description */}
           <div className="ml-0 sm:ml-4 mt-4 sm:mt-0">
-            <h1 className="text-3xl font-semibold text-green-300">
-              {infoLabel.role}
-            </h1>
+            <div className="flex">
+              <h1 className="text-3xl text-center font-semibold text-green-300 transform hover:scale-105 transition duration-300 ease-in-out">
+                {infoLabel.role}
+              </h1>
+            </div>
             <p className="italic">
               Hello, my name is Echo, and I&apos;m a college graduate from
               Information Technology with a concentration on Deep Learning in a
@@ -150,7 +152,7 @@ export default function About() {
           {interest.map((interest) => (
             <div
               key={interest.id}
-              className="p-6 rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out flex items-center"
+              className="p-6 rounded-lg shadow-lg hover:shadow-2xl hover:text-green-400 transform hover:scale-105 transition duration-300 ease-in-out flex items-center"
             >
               <div className="text-4xl">{<interest.icon />}</div>
               <div className="ml-2">

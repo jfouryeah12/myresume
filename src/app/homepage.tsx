@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion"; // Import framer-motion
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa"; // Import social media icons
 import About from "./components/About";
 import Resume from "./components/Resume";
-import { infoLabel, directLinks } from "./components/Lib/string";
+import { infoLabel, directLinks, publisher } from "./components/Lib/string";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
 import clsx from "clsx";
 import Fortpolio from "./components/Fortpolio";
@@ -111,6 +111,32 @@ export default function Home() {
               >
                 Open Resume
               </motion.button>
+            </div>
+            <div
+              style={{
+                position: "fixed",
+                bottom: 0,
+                width: "100%",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  padding: "10px",
+                }}
+              >
+                <p style={{ color: "white" }} className="text-xs">
+                  <a
+                    className="hover:text-green-400"
+                    target="_blank"
+                    href={publisher.mygitdesign}
+                  >
+                    {" "}
+                    {publisher.publisher}
+                  </a>
+                </p>
+              </div>
             </div>
           </motion.section>
         )}
