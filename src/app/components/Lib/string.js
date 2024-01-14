@@ -7,6 +7,7 @@ String of every label
 export const infoLabel = {
   Imahe: "/static/Echo 1.svg",
   role: "Programmer",
+  firstname: "Jericho",
   name: "Estares Y. Jericho",
   bday: "24, Nov, 2001",
   age: "21",
@@ -15,6 +16,8 @@ export const infoLabel = {
   city: "Bulacan, Philippines",
   program: "Bachelor of Science in Information Technology",
   email: "jerichoyestares2001@yahoo.com",
+  status: false,
+  statuspdf: false,
 };
 
 export const publisher = {
@@ -30,5 +33,5 @@ export const directLinks = {
 };
 
 export const downloadLinks = {
-  pdf: "/pdf/Estares-Jericho Resume.pdf",
+  pdf: "",
 };
