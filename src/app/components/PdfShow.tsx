@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { downloadLinks } from "./Lib/string";
+import { downloadLinks, infoLabel } from "./Lib/string";
 import { AnimatePresence, motion } from "framer-motion";
 import { AiOutlineFilePdf } from "react-icons/ai";
+import toast from "react-hot-toast";
 
 export default function PdfShow() {
   const [isHovered, setIsHovered] = useState(false);
+
+  //Disable
+  const [isidentify, setidentify] = useState(infoLabel.statuspdf);
+  const [isDisable, setisDisable] = useState(false);
 
   const handleHover = () => {
     setIsHovered(true);
@@ -15,20 +20,63 @@ export default function PdfShow() {
   };
 
   const downloadPDF = () => {
-    // Replace this URL with the actual URL of the PDF file you want to download
-    const pdfUrl = downloadLinks.pdf;
+    try {
+      if (infoLabel.statuspdf === true) {
+        console.log("Ok!");
+        const pdfUrl = downloadLinks.pdf;
 
-    // Create an anchor element to trigger the download
-    const anchor = document.createElement("a");
-    anchor.href = pdfUrl;
-    anchor.target = "_blank";
-    anchor.download = "estares-jericho-resume.pdf"; // You can set the filename here
+        const anchor = document.createElement("a");
+        anchor.href = pdfUrl;
+        anchor.target = "_blank";
+        anchor.download = "estares-jericho-resume.pdf";
 
-    // Trigger a click event on the anchor element to start the download
-    anchor.click();
-
-    // Cleanup: Remove the anchor element
-    anchor.remove();
+        anchor.click();
+        anchor.remove();
+      } else {
+        console.log("Failed");
+        setisDisable(true);
+        document.body.classList.add("animate__animated", "animate__shakeX");
+        toast.custom(
+          (t) => (
+            <div
+              className={`${
+                t.visible
+                  ? "animate-enter animate__animated animate__flash"
+                  : "animate-leave animate__animated animate__fadeOut"
+              } max-w-md w-full bg-gradient-to-r from-red-500 to-pink-500 shadow-lg rounded-lg overflow-hidden pointer-events-auto ring-1 ring-black ring-opacity-5`}
+            >
+              <div className="flex-1 p-4">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0">
+                    <img
+                      className="h-10 w-10 rounded-full"
+                      src="https://scontent.fmnl8-1.fna.fbcdn.net/v/t39.30808-6/273156220_1350584145371011_5649855247010521685_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9c7eae&_nc_eui2=AeGr7_cBpx5v48grqdjm4RKAsF5jDTQH2hGwXmMNNAfaET2xscg7kCn0rzzrNq58Lq1CdRozq74GYjMUH3QHuUJH&_nc_ohc=mFjjKHgSe38AX9ZIfV_&_nc_zt=23&_nc_ht=scontent.fmnl8-1.fna&oh=00_AfDk91_8NGzrK15kw9w1nLQgWjKym4hCzwLgoQnxnW1KnA&oe=65A8A1B6"
+                      alt=""
+                    />
+                  </div>
+                  <div className="ml-3 flex-1">
+                    <p className="text-base font-medium text-white">
+                      {infoLabel.firstname}
+                    </p>
+                    <p className="mt-1 text-sm text-gray-200">
+                      Apologies, but you are currently unable to access this
+                      feature. I am not actively seeking new job opportunities
+                      or clients at the moment.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex justify-center p-2 font-bold">
+                <p className="mt-1">Access Denied!</p>
+              </div>
+            </div>
+          ),
+          { duration: 8000 },
+        );
+      }
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   useEffect(() => {

@@ -4,10 +4,13 @@ import { motion, AnimatePresence } from "framer-motion"; // Import framer-motion
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa"; // Import social media icons
 import About from "./components/About";
 import Resume from "./components/Resume";
+import Fortpolio from "./components/Fortpolio";
 import { infoLabel, directLinks, publisher } from "./components/Lib/string";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
 import clsx from "clsx";
-import Fortpolio from "./components/Fortpolio";
+import toast from "react-hot-toast";
+import "animate.css/animate.min.css";
+import Link from "next/link";
 
 export default function Home() {
   const [isHomeVisible, setIsHomeVisible] = useState(true);
@@ -16,9 +19,71 @@ export default function Home() {
   const [isFortpolioVisible, setIsFortpolioVisible] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
+  //Disable
+  const [isidentify, setidentify] = useState(infoLabel.status);
+  const [isDisable, setisDisable] = useState(false);
+
   const toggleVisibility = () => {
-    setIsHomeVisible((prev) => !prev);
+    if (isidentify === true) {
+      console.log("Ok!");
+      setIsHomeVisible((prev) => !prev);
+    } else {
+      console.log("Failed");
+      setisDisable(true);
+      document.body.classList.add("animate__animated", "animate__shakeX");
+      toast.custom(
+        (t) => (
+          <div
+            className={`${
+              t.visible
+                ? "animate-enter animate__animated animate__flash"
+                : "animate-leave animate__animated animate__fadeOut"
+            } max-w-md w-full bg-gradient-to-r from-red-500 to-pink-500 shadow-lg rounded-lg overflow-hidden pointer-events-auto ring-1 ring-black ring-opacity-5`}
+          >
+            <div className="flex-1 p-4">
+              <div className="flex items-start">
+                <div className="flex-shrink-0">
+                  <img
+                    className="h-10 w-10 rounded-full"
+                    src="https://scontent.fmnl8-1.fna.fbcdn.net/v/t39.30808-6/273156220_1350584145371011_5649855247010521685_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9c7eae&_nc_eui2=AeGr7_cBpx5v48grqdjm4RKAsF5jDTQH2hGwXmMNNAfaET2xscg7kCn0rzzrNq58Lq1CdRozq74GYjMUH3QHuUJH&_nc_ohc=mFjjKHgSe38AX9ZIfV_&_nc_zt=23&_nc_ht=scontent.fmnl8-1.fna&oh=00_AfDk91_8NGzrK15kw9w1nLQgWjKym4hCzwLgoQnxnW1KnA&oe=65A8A1B6"
+                    alt=""
+                  />
+                </div>
+                <div className="ml-3 flex-1">
+                  <p className="text-base font-medium text-white">
+                    {infoLabel.firstname}
+                  </p>
+                  <p className="mt-1 text-sm text-gray-200">
+                    Apologies, but you are currently unable to access this
+                    feature. I am not actively seeking new job opportunities or
+                    clients at the moment.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="flex justify-center p-2 font-bold">
+              <p className="mt-1">Access Denied!</p>
+            </div>
+          </div>
+        ),
+        { duration: 8000 },
+      );
+    }
   };
+
+  useEffect(() => {
+    const cleanupAnimation = () => {
+      document.body.classList.remove("animate__animated", "animate__shakeX");
+    };
+
+    if (isidentify === true) {
+      setTimeout(cleanupAnimation, 1000); // Adjust the delay as needed
+    }
+
+    return () => {
+      cleanupAnimation();
+    };
+  }, [isidentify]);
 
   const toggleAboutVisibility = () => {
     setIsAboutVisible(true);
@@ -111,6 +176,11 @@ export default function Home() {
               >
                 Open Resume
               </motion.button>
+              {isDisable && (
+                <div className="text-white mt-4">
+                  <p>Admin say no.</p>
+                </div>
+              )}
             </div>
             <div
               style={{
@@ -127,14 +197,15 @@ export default function Home() {
                 }}
               >
                 <p style={{ color: "white" }} className="text-xs">
-                  <a
+                  <Link
                     className="hover:text-green-400"
                     target="_blank"
+                    hidden={isDisable}
                     href={publisher.mygitdesign}
                   >
                     {" "}
                     {publisher.publisher}
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>
