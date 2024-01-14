@@ -140,7 +140,7 @@ export default function Home() {
                 whileHover={{ scale: 1.05 }}
                 className="text-lg"
               >
-                I&apos;m {infoLabel.role} from the Philippines
+                I&apos;m a {infoLabel.role} from the Philippines
               </motion.p>
               {/* Social Media Icons */}
               <div className="flex justify-center mt-4 space-x-4">
